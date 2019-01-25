@@ -10,7 +10,7 @@ source:
   sha256: 51c9d52a954db4e1aa1cf11b214a7fda5a6b2459f508ea33b97e8de21638c690
 
 build:
-  number: 0
+  number: 1
   skip: True  # [not unix]
   entry_points:
     - dsub=dsub.commands.dsub:main
