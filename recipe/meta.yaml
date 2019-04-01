@@ -1,5 +1,5 @@
 {% set name = "dsub" %}
-{% set version = "0.2.5" %}
+{% set version = "0.2.6" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 11597cceb10dd772ca43bf90a5855680d95277a3e1af095b2c1c4632bd26748e
+  sha256: afb51cdcc72df2dd926b58e44f825dd4564346d396ef6162e0d561c1dee4f7f3
 
 build:
   number: 0
