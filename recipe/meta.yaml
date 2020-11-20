@@ -1,22 +1,22 @@
 {% set name = "dsub" %}
-{% set version = "0.3.6" %}
+{% set version = "0.4.2" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5f1f804da9b2b80475c889dab31a2d92d1ddc9ccce0a72be342f84de172098a2
+  sha256: 2162a9da786beea4dad1a0184edff81f75b3397135518afd813eee10fa3535a8
 
 build:
-  number: 2
-  skip: True  # [not unix]
+  number: 0
+  skip: true  # [not unix]
   entry_points:
     - dsub=dsub.commands.dsub:main
     - dstat=dsub.commands.dstat:main
     - ddel=dsub.commands.ddel:main
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   host:
